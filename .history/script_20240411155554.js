@@ -51,7 +51,7 @@ curtoBt.addEventListener('click', () => {
 })
 
 longoBt.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 900
+    tempoDecorridoEmSegundos = 300
     // html.setAttribute('data-contexto', 'descanso-longo')
     // banner.setAttribute('src', './imagens/descanso-longo.png' )
     alterarContexto('descanso-longo')
@@ -60,7 +60,6 @@ longoBt.addEventListener('click', () => {
 
 // refatorando o código acima
 function alterarContexto(contexto){
-    mostrarTempo()
     botoes.forEach(function(contexto){
         contexto.classList.remove('active')
     })

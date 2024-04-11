@@ -35,7 +35,6 @@ musicaFocoInput.addEventListener('change', () =>{
 
 
 focoBt.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 1500
     // html.setAttribute('data-contexto', 'foco')
     // banner.setAttribute('src', './imagens/foco.png' )
     alterarContexto('foco')
@@ -43,7 +42,6 @@ focoBt.addEventListener('click', () => {
 })
 
 curtoBt.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 300
     // html.setAttribute('data-contexto', 'descanso-curto')
     // banner.setAttribute('src', './imagens/descanso-curto.png' )
     alterarContexto('descanso-curto')
@@ -51,7 +49,6 @@ curtoBt.addEventListener('click', () => {
 })
 
 longoBt.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 900
     // html.setAttribute('data-contexto', 'descanso-longo')
     // banner.setAttribute('src', './imagens/descanso-longo.png' )
     alterarContexto('descanso-longo')
@@ -60,7 +57,6 @@ longoBt.addEventListener('click', () => {
 
 // refatorando o código acima
 function alterarContexto(contexto){
-    mostrarTempo()
     botoes.forEach(function(contexto){
         contexto.classList.remove('active')
     })
@@ -123,9 +119,8 @@ function zerar(){
 }
 
 function mostrarTempo(){
-    const tempo = new Date(tempoDecorridoEmSegundos * 1000)
-    const tempoFormatado = tempo.toLocaleTimeString('pt-br', {minute: '2-digit', second: '2-digit'})
-    tempoNaTela.innerHTML = `${tempoFormatado}`
+    const tempo = tempoDecorridoEmSegundos
+    tempoNaTela.innerHTML = `${tempo}`
 }
 
 mostrarTempo()
