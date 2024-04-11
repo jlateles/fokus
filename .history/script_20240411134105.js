@@ -3,9 +3,10 @@ const html = document.querySelector('html');
 const focoBt = document.querySelector('.app__card-button--foco');
 const curtoBt = document.querySelector('.app__card-button--curto');
 const longoBt = document.querySelector('.app__card-button--longo');
+
 const banner = document.querySelector('.app__image');
+
 const title = document.querySelector('.app__title');
-const botoes = document.querySelectorAll('.app__card-button');
 
 focoBt.addEventListener('click', () => {
     // html.setAttribute('data-contexto', 'foco')
@@ -30,9 +31,6 @@ longoBt.addEventListener('click', () => {
 
 // refatorando o código acima
 function alterarContexto(contexto){
-    botoes.forEach(function(contexto){
-        contexto.classList.remove('active')
-    })
     html.setAttribute('data-contexto', contexto)
     banner.setAttribute('src', `/imagens/${contexto}.png`)
     switch (contexto) {
