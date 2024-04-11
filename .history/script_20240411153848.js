@@ -103,15 +103,11 @@ function iniciarOuPausar(){
     }
     intervaloId = setInterval(contagemRegressiva, 1000)
     somPlay.play()
-    iniciarOuPausarBt.textContent =  "Pausar"
-    iniciarOuPausarBt.previousElementSibling.setAttribute('src','/imagens/pause.png');
 }
 
 function zerar(){
     clearInterval(intervaloId)
-    iniciarOuPausarBt.textContent = "Iniciar"
     intervaloId = null
     somPause.play()
-    //startPauseBt.innerHTML = 'Iniciar';
-    iniciarOuPausarBt.previousElementSibling.setAttribute('src','/imagens/play_arrow.png');
+    startPauseBt.innerHTML = 'Comecar';
 }
