@@ -17,9 +17,8 @@ curtoBt.addEventListener('click', () => {
 })
 
 longoBt.addEventListener('click', () => {
-   // html.setAttribute('data-contexto', 'descanso-longo')
-    // banner.setAttribute('src', './imagens/descanso-longo.png' )
-    alterarContexto('descanso-longo')
+    html.setAttribute('data-contexto', 'descanso-longo')
+    banner.setAttribute('src', './imagens/descanso-longo.png' )
 })
 
 // refatorando o codigo acima
@@ -32,17 +31,7 @@ function alterarContexto(contexto){
             <strong class="app__title-strong">mergulhe no que importa.</strong>`
             
             break;
-
-        case "descanso-curto":
-            title.innerHTML = `Que tal dar uma respirada?
-            <strong class="app__title-strong">Faça uma pausa curta.</strong>`
-
-            break;
-
-        case "descanso-longo":
-            title.innerHTML = `Hora de voltar à superfície.
-            <strong class="app__title-strong">Faça uma pausa longa.</strong>`
-
+    
         default:
             break;
     }

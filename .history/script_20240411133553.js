@@ -17,9 +17,8 @@ curtoBt.addEventListener('click', () => {
 })
 
 longoBt.addEventListener('click', () => {
-   // html.setAttribute('data-contexto', 'descanso-longo')
-    // banner.setAttribute('src', './imagens/descanso-longo.png' )
-    alterarContexto('descanso-longo')
+    html.setAttribute('data-contexto', 'descanso-longo')
+    banner.setAttribute('src', './imagens/descanso-longo.png' )
 })
 
 // refatorando o codigo acima
