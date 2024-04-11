@@ -84,7 +84,6 @@ function alterarContexto(contexto){
 const contagemRegressiva = () =>{
     // iniciar()
     if (tempoDecorridoEmSegundos <= 0){
-        somZero.play()
         zerar()
         alert('Tempo finalizado!')
         return

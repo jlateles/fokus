@@ -84,7 +84,6 @@ function alterarContexto(contexto){
 const contagemRegressiva = () =>{
     // iniciar()
     if (tempoDecorridoEmSegundos <= 0){
-        somZero.play()
         zerar()
         alert('Tempo finalizado!')
         return
@@ -100,13 +99,10 @@ function iniciarOuPausar(){
         zerar()
         return
     }
-    intervaloId = setInterval(contagemRegressiva, 1000)
-    somPlay.play()
+    intervaloId = setInterval(contagemRegressiva, 1000) 
 }
 
 function zerar(){
     clearInterval(intervaloId)
     intervaloId = null
-    somPause.play()
-    startPauseBt.innerHTML = 'Comecar';
 }
