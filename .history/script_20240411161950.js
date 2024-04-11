@@ -129,3 +129,19 @@ function mostrarTempo(){
 }
 
 mostrarTempo()
+
+function reiniciar (){
+    if(focoBt.classList.contains('active')){
+        tempoDecorridoEmSegundos = 1500
+
+    }else if(curtoBt.classList.contains('active')){
+        tempoDecorridoEmSegundos = 300   
+
+    }else if(longoBt.classList.contains('active')){
+        tempoDecorridoEmSegundos = 900
+    }
+    
+    zerar()
+    mostrarTempo()
+    somUpdate.play()
+}
